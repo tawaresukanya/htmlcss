@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LogIn</title>
+        <style>
+
+
+
+            body {
+                background: url(css2.jpg) no-repeat center center fixed; 
+                background-size: cover;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .loginsign {           
+                padding: 40px;
+                width: 400px;
+                background-color: transparent;
+                margin: 350px 850px 10px;
+                border-radius: 10px;
+                box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+                overflow: hidden;
+            }
+
+
+
+            .loginsign input[type=submit] {
+
+                width: 100%;
+                display: block;
+                margin-bottom: 10px;
+                position: relative;
+            }
+
+            
+ 
+            .loginsign input[type=text], input[type=password] {
+                height: 44px;
+                font-size: 16px;
+                width: 100%;
+                margin-bottom: 10px;
+                background: #fff;
+                border: 1px solid #d9d9d9;
+                border-top: 1px solid #c0c0c0;
+                padding: 0 8px;
+                box-sizing: border-box;
+
+            }
+
+            .login {
+                text-align: center;
+                font-size: 14px;
+                font-family: 'Arial', sans-serif;
+                font-weight: 500;
+                height: 36px;
+                padding: 0 8px;
+
+            }
+
+            .login-submit {
+                border: 0px;
+                color: #fff;
+                text-shadow: 0 1px rgba(0,0,0,0.1); 
+                background-color: #4d90fe;
+            }
+
+            .login-submit:hover {
+                border: 0px;
+                text-shadow: 0 1px rgba(0,0,0,0.3);
+                background-color: #357ae8;
+            }
+
+            .loginsign a {
+
+                color: black;
+                font-weight: 200;
+
+            }
+
+            .loginsign a:hover {
+                opacity: 2;
+            }
+
+            .link {
+                width: 100%;
+                text-align: center;
+                font-size: 15px;
+
+            }
+        </style>
+
+        <script type="text/javascript">
+            function validate()
+            {
+                if (document.form1.user.value == "")
+                {
+                    alert("Enter Your Username.");
+                    document.form1.user.focus();
+                    return false;
+                }
+                if (document.form1.pass.value == "")
+                {
+                    alert("Enter Your Password");
+                    document.form1.pass.focus();
+                    return false;
+                }
+                if (document.form1.user.value == "demo" && document.form1.pass.value == "demo")
+                {
+                    alert("Login SuccessFul");
+                    return true;
+                }
+                else
+                {
+                    alert("Enter Correct login Cerentials")
+                    return false;
+                }
+
+            }
+        </script>
+
+    </head>
+
+    <body>
+
+        <div class="loginsign">
+            <h1 style="text-align: center; font-weight: 200;">Log In</h1><br>
+            <form name="form1" action="practice.html" onsubmit="return validate();" method="POST" class="sign">
+                <input type="text" name="user" placeholder="Username">
+                <input type="password" name="pass" placeholder="Password">
+                <input type="checkbox" name="check" value="ON" />Remember me
+                <input type="submit" name="login" class="login login-submit" value="login">
+            </form>
+
+            <div class="link">
+                <a href="forget.html">Forgot Password</a>
+            </div>
+        </div>
+    </body>
+
+</html>
